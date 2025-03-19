@@ -6,10 +6,8 @@
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
-
-  /* Usamos 'position: relative' y ajustamos 'top' para moverlo hacia arriba */
   position: relative;
-  top: -410px; /* Ajusta este valor según tus necesidades */
+  top: -420px; 
 }
 
 .detail-container img {
@@ -22,9 +20,10 @@
 .detail-container h2 {
   margin-bottom: 10px;
   color: #333;
+  font-size: 28px;
 }
 
 .detail-container p {
   margin: 5px 0;
-  font-size: 16px;
+  font-size: 20px;
 }
