@@ -9,7 +9,7 @@
 
   /* Usamos 'position: relative' y ajustamos 'top' para moverlo hacia arriba */
   position: relative;
-  top: -310px; /* Ajusta este valor según tus necesidades */
+  top: -410px; /* Ajusta este valor según tus necesidades */
 }
 
 .detail-container img {
