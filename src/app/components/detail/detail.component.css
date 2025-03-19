@@ -4,8 +4,12 @@
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 500px;
-  margin: 20px auto;
+  margin: 0 auto;
   text-align: center;
+
+  /* Usamos 'position: relative' y ajustamos 'top' para moverlo hacia arriba */
+  position: relative;
+  top: -310px; /* Ajusta este valor según tus necesidades */
 }
 
 .detail-container img {
