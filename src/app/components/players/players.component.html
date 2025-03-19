@@ -6,7 +6,7 @@
   <ul class="player-list">
     <li *ngFor="let jugador of jugadores | jugadorFiltro:filtro" (click)="seleccionarJugador(jugador)">
       <img [src]="jugador.foto" alt="{{ jugador.nombre }}" class="jugador-imagen">
-      <p>{{ jugador.nombre }} - {{ jugador.posicion }} - {{ jugador.edad }} años</p>
+      <p>{{ jugador.nombre }} {{ jugador.apellidos }} - {{ jugador.posicion }} - {{ jugador.edad }} años</p>
     </li>
   </ul>
 
