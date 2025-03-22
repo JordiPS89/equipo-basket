@@ -1,31 +1,38 @@
 .players-container {
-    text-align: center;
-  }
-  
-  .search-bar {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .player-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .player-list li {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .jugador-imagen {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
+  text-align: center;
+}
+
+.search-bar {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.player-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Aumentar el tamaño de la fuente del listado de jugadores */
+.player-list li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 22px; /* Aumenta el tamaño de la fuente */
+}
+
+/* Aumentar el tamaño de la fuente para los detalles de los jugadores */
+.player-list li p {
+  font-size: 20px; /* Aumenta el tamaño del nombre del jugador */
+}
+
+/* Ajustar el tamaño de las imágenes de los jugadores */
+.jugador-imagen {
+  width: 70px; /* Aumenta el tamaño de las imágenes */
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
