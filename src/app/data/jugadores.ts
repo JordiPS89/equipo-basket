@@ -1,4 +1,5 @@
 export const JUGADORES = [
+  // Players
   {
     id: 1,
     nombre: 'LeBron James',
