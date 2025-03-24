@@ -16,7 +16,7 @@ export class PlayersComponent {
   filtroNombre: string = '';
   filtroEdad: string = '';
   filtroPosicion: string = '';
-
+//metemos los filtros de busqueda, tanto para nombre, edad y posicion
   jugadores = JUGADORES;
   jugadorSeleccionado: any = null;
   seleccionarJugador(jugador: any) {
