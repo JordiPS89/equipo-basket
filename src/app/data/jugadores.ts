@@ -1,8 +1,7 @@
 export const JUGADORES = [
   {
     id: 1,
-    nombre: 'LeBron',
-    apellidos: 'James',
+    nombre: 'LeBron James',
     posicion: 'Alero',
     edad: 39,
     altura: '2.06m',
@@ -12,8 +11,7 @@ export const JUGADORES = [
   },
   {
     id: 2,
-    nombre: 'Stephen',
-    apellidos: 'Curry',
+    nombre: 'Stephen Curry',
     posicion: 'Base',
     edad: 35,
     altura: '1.88m',
@@ -23,8 +21,7 @@ export const JUGADORES = [
   },
   {
     id: 3,
-    nombre: 'Kevin',
-    apellidos: 'Durant',
+    nombre: 'Kevin Durant',
     posicion: 'Alero',
     edad: 35,
     altura: '2.08m',
@@ -34,8 +31,7 @@ export const JUGADORES = [
   },
   {
     id: 4,
-    nombre: 'Giannis',
-    apellidos: 'Antetokounmpo',
+    nombre: 'Giannis Antetokounmpo',
     posicion: 'Ala-Pívot',
     edad: 29,
     altura: '2.11m',
@@ -45,8 +41,7 @@ export const JUGADORES = [
   },
   {
     id: 5,
-    nombre: 'Nikola',
-    apellidos: 'Jokic',
+    nombre: 'Nikola Jokic',
     posicion: 'Pívot',
     edad: 29,
     altura: '2.11m',
