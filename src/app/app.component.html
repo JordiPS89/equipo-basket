@@ -1,3 +1,9 @@
-<app-header></app-header>
-<app-players></app-players>
-<app-footer></app-footer>
+<header class="bg-dark text-white text-center p-4 shadow mb-4">
+    <h1 class="display-4 fw-bold">🏀 EQUIPO BASKET 🏀</h1>
+    <p class="lead mb-0">Gestión de Jugadores</p>
+  </header>
+  
+  <app-players (jugadorSeleccionadoEvent)="mostrarDetalle($event)"></app-players>
+  
+  <app-detail [jugador]="jugadorSeleccionado"></app-detail>
+<app-media [videoUrl]="jugadorSeleccionado?.video"></app-media>
