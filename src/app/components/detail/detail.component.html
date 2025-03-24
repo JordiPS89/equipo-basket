@@ -1,27 +1,15 @@
-<div *ngIf="jugador" class="modal" id="jugadorModal" aria-labelledby="jugadorModalLabel" aria-hidden="true" >
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" (click)="cerrarModal()" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class = "modal-media">
-          <div>
-            <img [src]="jugador.foto" class="img-fluid" alt="{{ jugador.nombre }}">
-          </div>
-          <div *ngIf="jugador.video">
-            <app-media [videoUrl]="jugador.video"></app-media>
-          </div>
-        </div>
-        <div class = "modal-text">
-          <h5 class="modal-title" id="jugadorModalLabel">{{ jugador.nombre }} {{ jugador.apellidos }}</h5>
-          <p><strong>Equipo:</strong> {{ jugador.equipo }}</p>
-          <p><strong>Posición:</strong> {{ jugador.posicion }}</p>
-          <p><strong>Edad:</strong> {{ jugador.edad }} años</p>
-          <p><strong>Altura:</strong> {{ jugador.altura }}</p>
-        </div>
-        
-      </div>
-    </div>
+<div class="detalle-container card p-4 mx-auto mt-4" *ngIf="jugador" style="max-width: 400px;">
+    <h2 class="fw-bold">{{ jugador.nombre }} {{ jugador.apellidos }}</h2>
+    <p><strong>Equipo:</strong> {{ jugador.equipo }}</p>
+    <p><strong>Posición:</strong> {{ jugador.posicion }}</p>
+    <p><strong>Edad:</strong> {{ jugador.edad }} años</p>
+    <p><strong>Altura:</strong> {{ jugador.altura }}</p>
+    
+    <!-- Imagen con tamaño limitado -->
+    <img
+      [src]="jugador.foto"
+      alt="{{ jugador.nombre }}"
+      class="img-fluid rounded mt-3 detalle-foto"
+    />
   </div>
-</div>
+  

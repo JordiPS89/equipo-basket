@@ -1,30 +1,30 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { JUGADORES } from '../../data/jugadores';
 import { JugadorFiltroPipe } from '../../pipes/jugador-filtro.pipe';
-import { DetailComponent } from '../detail/detail.component';
+import { JUGADORES } from '../../data/jugadores';
 
 @Component({
   selector: 'app-players',
   standalone: true,
-  imports: [CommonModule, DetailComponent, FormsModule, JugadorFiltroPipe],
+  imports: [CommonModule, FormsModule, JugadorFiltroPipe], // DetailComponent eliminado porque no se usa aquí
   templateUrl: './players.component.html',
   styleUrls: ['./players.component.css']
 })
 export class PlayersComponent {
+  // Lista de jugadores y filtros
+  jugadores = JUGADORES;
   filtroNombre: string = '';
-  filtroEdad: string = '';
   filtroPosicion: string = '';
 
-  jugadores = JUGADORES;
+  // Jugador seleccionado (usado solo para emitir al padre)
   jugadorSeleccionado: any = null;
+
+  // Comunicación con el componente padre (app.component)
+  @Output() jugadorSeleccionadoEvent = new EventEmitter<any>();
+
   seleccionarJugador(jugador: any) {
     this.jugadorSeleccionado = jugador;
+    this.jugadorSeleccionadoEvent.emit(jugador);
   }
-
-
-
-
-  
 }
