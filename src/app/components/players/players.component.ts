@@ -17,7 +17,9 @@ export class PlayersComponent {
   filtroNombre: string = '';
   filtroPosicion: string = '';
 
-  // Jugador seleccionado (usado solo para emitir al padre)
+//metemos los filtros de busqueda, tanto para nombre, edad y posicion
+  jugadores = JUGADORES;
+
   jugadorSeleccionado: any = null;
 
   // Comunicación con el componente padre (app.component)
