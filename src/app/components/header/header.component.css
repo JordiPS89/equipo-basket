@@ -1,9 +1,24 @@
 .header {
-    background-color: #1e3a8a;
+    background-color: #0C95F6;
     color: white;
     text-align: center;
     padding: 15px;
-    font-size: 24px;
     font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items:end;
   }
-  
+
+  .h1-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 6em;
+    font-weight: bold;
+
+  }  
+  .h2-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    color: #484545;
+
+  }

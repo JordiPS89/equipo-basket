@@ -1,36 +1,47 @@
-<div class="filtros mb-3">
-  <input
-    type="text"
-    [(ngModel)]="filtroNombre"
-    placeholder="Buscar por nombre"
-    class="form-control mb-2"
-  />
+<div class="container justify-content-center pb-32">
+  <h3 class = "h3-title">Lista de Jugadores</h3>
+  <div class = "container">
+    <h4 class="buscador-title">Buscador</h4>
+    <div class="row">
+      <div class = "col">
+        <input type="text" [(ngModel)]="filtroNombre" placeholder="Nombre" class="search-bar" />
+      </div>
+      <div class = "col">
+      <input type="text" [(ngModel)]="filtroEdad"  placeholder="Edad" class="search-bar" />
+      </div>
 
-  <select [(ngModel)]="filtroPosicion" class="form-control">
-    <option value="">Todas las posiciones</option>
-    <option value="Base">Base</option>
-    <option value="Alero">Alero</option>
-    <option value="Ala-Pívot">Ala-Pívot</option>
-    <option value="Pívot">Pívot</option>
-  </select>
-</div>
+      <div class = "col">
+      <input type="text" [(ngModel)]="filtroPosicion" placeholder="Posición" class="search-bar" />
+      </div>
 
-<div class="jugadores-lista">
-  <ul class="list-unstyled">
-    <li
-      *ngFor="let jugador of jugadores | jugadorFiltro:filtroNombre:filtroPosicion"
-      (click)="seleccionarJugador(jugador)"
-      class="jugador-item d-flex align-items-center mb-2"
-      style="cursor: pointer"
-    >
-      <img
-        [src]="jugador.foto"
-        alt="{{ jugador.nombre }}"
-        class="rounded-circle me-2"
-        width="50"
-        height="50"
-      />
-      {{ jugador.nombre }} - {{ jugador.posicion }} - {{ jugador.edad }} años
-    </li>
-  </ul>
+    </div>
+
+  </div>
+
+  <div class="container mt-4">
+    <div class="row">
+      <h4 class="grid-title">Jugadores</h4>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let jugador of jugadores |jugadorFiltro :filtroNombre:filtroEdad:filtroPosicion">
+        <div class="card player-card" (click)="seleccionarJugador(jugador)">
+          <div class="row g-0" >
+            <div class="col-4">
+              <img [src]="jugador.foto" class="img-fluid rounded-start jugador-img" [alt]="jugador.nombre">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h6 class="card-title">{{ jugador.nombre }} {{ jugador.apellidos }}</h6>
+                <p class="card-text"><strong>Equipo:</strong> {{ jugador.equipo }}</p>
+                <p class="card-text"><strong>Posición:</strong> {{ jugador.posicion }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+  <app-detail *ngIf="jugadorSeleccionado" [jugador]="jugadorSeleccionado"></app-detail>
 </div>

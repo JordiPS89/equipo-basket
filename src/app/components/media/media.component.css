@@ -1,5 +1,14 @@
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: .5em;
+  display: block;
+}
 .media-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
+  height: auto;
+  width: 100%;
+  max-width: 12em;
+  margin: 0 auto;
+  border-radius: .5em;
+}
